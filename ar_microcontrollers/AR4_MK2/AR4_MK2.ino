@@ -296,7 +296,7 @@ void stateTRAJ() {
         // calibrate all joints
         int calJoints[] = {0, 0, 0, 0, 0, 0};
         for (int joint = 0; joint < NUM_JOINTS; joint++) {
-          if (joint = 0) {
+          if (joint == 0) {
             calJoints[joint] = 1;
           } else {
             calJoints[joint - 1] = 0;
