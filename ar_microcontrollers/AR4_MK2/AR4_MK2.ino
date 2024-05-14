@@ -53,7 +53,7 @@ const int LIMIT_SWITCH_HIGH[] = {
     1, 1, 1, 1, 1, 1};  // to account for both NC and NO limit switches
 const int CAL_DIR[] = {-1, -1, 1,
                        -1, -1, 1};  // joint rotation direction to limit switch
-const int CAL_SPEED = 500;          // motor steps per second
+const int CAL_SPEED = 300;          // motor steps per second
 const int CAL_SPEED_MULT[] = {
     1, 1, 1, 2, 1, 1};  // multiplier to account for motor steps/rev
 
