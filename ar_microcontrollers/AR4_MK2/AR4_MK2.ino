@@ -16,7 +16,7 @@ const char *VERSION = "0.0.1";
 
 const int STEP_PINS[] = {0, 2, 4, 6, 8, 10};
 const int DIR_PINS[] = {1, 3, 5, 7, 9, 11};
-const int LIMIT_PINS[] = {26, 27, 28, 29, 30, 31};
+const int LIMIT_PINS[] = {26, 27, 28, 32, 30, 31};
 
 const float MOTOR_STEPS_PER_DEG[] = {47.6,        55.55555556, 55.55555556,
                                      44.44444444, 5.10508806,  22.22222222};
