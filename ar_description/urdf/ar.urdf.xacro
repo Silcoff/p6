@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ar4">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
   <xacro:include filename="$(find ar_description)/urdf/ar_macro.xacro"/>
 
   <link name="world" />

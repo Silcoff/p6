@@ -320,31 +320,31 @@ void stateTRAJ() {
         // immediately and become damaged.
         moveAwayFromLimitSwitch();
 
-        // return to original position
-        for (int i = 0; i < NUM_JOINTS; ++i) {
-          stepperJoints[i].setAcceleration(JOINT_MAX_ACCEL[i] *
-                                           MOTOR_STEPS_PER_DEG[i]);
-          stepperJoints[i].setMaxSpeed(JOINT_MAX_SPEED[i] *
-                                       MOTOR_STEPS_PER_DEG[i]);
-        }
+        // // return to original position
+        // for (int i = 0; i < NUM_JOINTS; ++i) {
+        //   stepperJoints[i].setAcceleration(JOINT_MAX_ACCEL[i] *
+        //                                    MOTOR_STEPS_PER_DEG[i]);
+        //   stepperJoints[i].setMaxSpeed(JOINT_MAX_SPEED[i] *
+        //                                MOTOR_STEPS_PER_DEG[i]);
+        // }
 
-        bool restPosReached = false;
-        while (!restPosReached) {
-          restPosReached = true;
-          readMotorSteps(curMotorSteps);
+        // bool restPosReached = false;
+        // while (!restPosReached) {
+        //   restPosReached = true;
+        //   readMotorSteps(curMotorSteps);
 
-          for (int i = 0; i < NUM_JOINTS; ++i) {
-            if (abs(REST_ENC_POSITIONS[i] / ENC_MULT[i] - curMotorSteps[i]) >
-                10) {
-              restPosReached = false;
-              float target_pos =
-                  (REST_ENC_POSITIONS[i] / ENC_MULT[i] - curMotorSteps[i]) *
-                  ENC_DIR[i];
-              stepperJoints[i].move(target_pos);
-              stepperJoints[i].run();
-            }
-          }
-        }
+        //   for (int i = 0; i < NUM_JOINTS; ++i) {
+        //     if (abs(REST_ENC_POSITIONS[i] / ENC_MULT[i] - curMotorSteps[i]) >
+        //         10) {
+        //       restPosReached = false;
+        //       float target_pos =
+        //           (REST_ENC_POSITIONS[i] / ENC_MULT[i] - curMotorSteps[i]) *
+        //           ENC_DIR[i];
+        //       stepperJoints[i].move(target_pos);
+        //       stepperJoints[i].run();
+        //     }
+        //   }
+        // }
 
         // calibration done, send calibration values
         String msg = String("JC") + "A" + calSteps[0] + "B" + calSteps[1] +
