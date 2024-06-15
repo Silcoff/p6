@@ -18,7 +18,8 @@ const int STEP_PINS[] = {0, 2, 4, 6, 8, 10};
 const int DIR_PINS[] = {1, 3, 5, 7, 9, 11};
 const int LIMIT_PINS[] = {26, 27, 28, 32, 30, 31};
 
-const float MOTOR_STEPS_PER_DEG[] = {47.0889, 52.6667, 59.5357, 44.8889, 21.0466,  21.3333};
+const float MOTOR_STEPS_PER_DEG[] = {47.0889, 52.6667, 59.5357,
+                                     44.8889, 21.0466, 21.3333};
 const int MOTOR_STEPS_PER_REV[] = {400, 400, 400, 400, 800, 400};
 
 // set encoder pins
@@ -32,8 +33,8 @@ int ENC_MAX_AT_ANGLE_MIN[] = {1, 0, 1, 0, 0, 1};
 const float ENC_MULT[] = {10, 10, 10, 10, 5, 10};
 
 // define axis limits in degrees, for calibration
-int JOINT_LIMIT_MIN[] = {-184, -47, -110 , -177, -103, -167};
-int JOINT_LIMIT_MAX[] = {150   ,  120 ,  62,  161  ,  103,  170};
+int JOINT_LIMIT_MIN[] = {-184, -47, -110, -177, -103, -167};
+int JOINT_LIMIT_MAX[] = {150, 120, 62, 161, 103, 170};
 
 ///////////////////////////////////////////////////////////////////////////////
 // ROS Driver Params
@@ -58,7 +59,7 @@ const int CAL_SPEED_MULT[] = {
 
 // speed and acceleration settings
 float JOINT_MAX_SPEED[] = {30.0, 30.0, 30.0, 30.0, 30.0, 30.0};  // deg/s
-float JOINT_MAX_ACCEL[] = {10.0, 10.0, 5.0, 10.0, 10.0, 10.0};  // deg/s^2
+float JOINT_MAX_ACCEL[] = {10.0, 10.0, 5.0, 10.0, 10.0, 10.0};   // deg/s^2
 char JOINT_NAMES[] = {'A', 'B', 'C', 'D', 'E', 'F'};
 
 // num of encoder steps in range of motion of joint
