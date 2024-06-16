@@ -57,7 +57,7 @@
       <parent link="base_link"/>
       <child link="link_1"/>
       <axis xyz="0 -1 0"/>
-      <limit lower="${-184.0 / 180.0 * pi}" upper="${150.0 / 180.0 * pi}" effort="0" velocity="0.5"/>
+      <limit lower="${-150.0 / 180.0 * pi}" upper="${184.0 / 180.0 * pi}" effort="0" velocity="0.5"/>
     </joint>
     <link name="link_2">
       <inertial>
