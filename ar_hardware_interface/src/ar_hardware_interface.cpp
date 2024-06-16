@@ -34,7 +34,8 @@ void ARHardwareInterface::init_variables() {
   joint_position_commands_.resize(num_joints);
   joint_velocity_commands_.resize(num_joints);
   joint_effort_commands_.resize(num_joints);
-  joint_offsets_ = {170.0, -42.0, -89.0, -165.0, -105.0, -155.0};
+  joint_offsets_ = {184.0, -47.0, -110.0, -177.0, -103.0, -167.0};
+  //{170.0, -42.0, -89.0, -165.0, -105.0, -155.0};
 }
 
 hardware_interface::CallbackReturn ARHardwareInterface::on_activate(
