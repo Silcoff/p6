@@ -17,8 +17,8 @@
 
       <joint name="joint_1">
         <command_interface name="position">
-          <param name="min">{-184.5*pi/180}</param>
-          <param name="max">{150*pi/180}</param>
+          <param name="min">{-150*pi/180}</param>
+          <param name="max">{184*pi/180}</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">0.0</param>
@@ -27,7 +27,7 @@
 
       <joint name="joint_2">
         <command_interface name="position">
-          <param name="min">{-47.6*pi/180}</param>
+          <param name="min">{-47*pi/180}</param>
           <param name="max">{120*pi/180}</param>
         </command_interface>
         <state_interface name="position">
@@ -38,7 +38,7 @@
       <joint name="joint_3">
         <command_interface name="position">
           <param name="min">{-110*pi/180}</param>
-          <param name="max">{62.6*pi/180}</param>
+          <param name="max">{62*pi/180}</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">0.0</param>
@@ -47,7 +47,7 @@
 
       <joint name="joint_4">
         <command_interface name="position">
-          <param name="min">{-177.1*pi/180}</param>
+          <param name="min">{-177*pi/180}</param>
           <param name="max">{161*pi/180}</param>
         </command_interface>
         <state_interface name="position">
@@ -57,8 +57,8 @@
 
       <joint name="joint_5">
         <command_interface name="position">
-          <param name="min">{-103.5*pi/180}</param>
-          <param name="max">{103.5*pi/180}</param>
+          <param name="min">{-103*pi/180}</param>
+          <param name="max">{103*pi/180}</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">0.0</param>
@@ -67,8 +67,8 @@
 
       <joint name="joint_6">
         <command_interface name="position">
-          <param name="min">{-167.8*pi/180}</param>
-          <param name="max">{170.7*pi/180}</param>
+          <param name="min">{-167*pi/180}</param>
+          <param name="max">{170*pi/180}</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">0.0</param>
