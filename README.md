@@ -37,7 +37,7 @@ This is a refresh of [ar3_core](https://github.com/ongdexter/ar3_core).
 - Clone this repository:
   ```bash
   git clone https://github.com/Silcoff/p6
- ```
+  ```
 - Install workspace dependencies:
   ```bash
   rosdep install --from-paths . --ignore-src -r -y
