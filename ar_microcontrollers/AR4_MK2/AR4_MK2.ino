@@ -297,12 +297,18 @@ void stateTRAJ() {
         int calJoints[] = {0, 0, 0, 0, 0, 0};
         for (int joint = 0; joint < NUM_JOINTS; joint++) {
           if (joint == 0) {
-            calJoints[joint] = 1;
+            calJoints[1] = 1;
+            calibrateJoints(calJoints);
+            calJoints[1] = 0;
+          } else if (joint == 1) {
+            calJoints[0] = 1;
+            calibrateJoints(calJoints);
+            calJoints[0] = 0;
           } else {
             calJoints[joint - 1] = 0;
             calJoints[joint] = 1;
+            calibrateJoints(calJoints);
           }
-          calibrateJoints(calJoints);
         }
 
         // record encoder steps
