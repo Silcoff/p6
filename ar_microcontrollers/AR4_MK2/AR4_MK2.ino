@@ -18,8 +18,7 @@ const int STEP_PINS[] = {0, 2, 4, 6, 8, 10};
 const int DIR_PINS[] = {1, 3, 5, 7, 9, 11};
 const int LIMIT_PINS[] = {26, 27, 28, 32, 30, 31};
 
-const float MOTOR_STEPS_PER_DEG[] = {47.0889, 52.6667, 59.5357,
-                                     44.8889, 21.0466, 21.3333};
+const float MOTOR_STEPS_PER_DEG[] = {47.0889, 52.6667, 59.5357, 44.8889, 21.0466, 21.3333};
 const int MOTOR_STEPS_PER_REV[] = {400, 400, 400, 400, 800, 400};
 
 // set encoder pins
@@ -296,11 +295,11 @@ void stateTRAJ() {
         // calibrate all joints
         int calJoints[] = {0, 0, 0, 0, 0, 0};
         for (int joint = 0; joint < NUM_JOINTS; joint++) {
-          if (joint == 0) {
-            calJoints[1] = 1;
+          if (joint == 0 || joint == 1) {
+            calJoints[joint+1] = 1;
             calibrateJoints(calJoints);
-            calJoints[1] = 0;
-          } else if (joint == 1) {
+            calJoints[joint+1] = 0;
+          } else if (joint == 2) {
             calJoints[0] = 1;
             calibrateJoints(calJoints);
             calJoints[0] = 0;
