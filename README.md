@@ -19,14 +19,14 @@ This is a refresh of [ar3_core](https://github.com/ongdexter/ar3_core).
 
 compile teensy
   ```bash
-arduino-cli compile ~/documents/p6/ar4_ros_driver/ar_microcontrollers/AR4_MK2/AR4_MK2.ino -b teensy:avr:teensy41
+arduino-cli compile FILENAME -b teensy:avr:teensy41
   ```
 
 
 
 upload teensy
   ```bash
-arduino-cli upload ~/documents/p6/ar4_ros_driver/ar_microcontrollers/AR4_MK2/AR4_MK2.ino -p usb1/1-7 -b teensy:avr:teensy41
+arduino-cli upload FILENAME -p usb1/1-7 -b teensy:avr:teensy41
   ```
 
 serial for terminal
